@@ -28,6 +28,7 @@ player_database: nome_do_arquivo
 
 # Sem compilar
 1 - Baixe a versão mais recente na aba release
+
 2 - Extraia em uma pasta
 3 - Configure o arquivo config.txt
 Ex:
