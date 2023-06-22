@@ -22,16 +22,24 @@ Autor: Carlos Eduardo Nishi, estudante da UTFPR.
 6 - Arquivo deve conter duas linhas, uma sendo o token, e outra sendo a database
 
 Ex:
+
 token: Seu_Token
+
 player_database: nome_do_arquivo
+
 7 - Inicie o programa
 
 # Sem compilar
+
 1 - Baixe a versão mais recente na aba release
 
 2 - Extraia em uma pasta
+
 3 - Configure o arquivo config.txt
+
 Ex:
 token: Seu_Token
+
 player_database: nome_do_arquivo
+
 4 - Inicie o programa
