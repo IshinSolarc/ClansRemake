@@ -5,7 +5,7 @@ Autor: Carlos Eduardo Nishi, estudante da UTFPR.
 # Dependencias
 - D++
 - Boost 1.82.0
-- 
+  
 # Compilação manual e utilização
 1 - Clone o projeto
 2 - Abra o projeto no Visual Studio
