@@ -21,7 +21,6 @@ class Tabela {
 	
 	std::vector <basePlayer*> getTabela();
 	void save();
-	void sort();
 
 public:
 	Tabela();

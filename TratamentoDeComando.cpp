@@ -6,10 +6,6 @@ std::string tdc::registrar(dpp::message_create_t event, Tabela& tabela) {
 		throw std::invalid_argument("Você já está registrado!");
 	}
 
-	//mensagem deve incluir o nome do jogador e o level
-	//entrada esperada: !registarar [nome] [level]
-	//exemplo: !registrarar Alvaroz 10
-
 	std::vector <std::string> args;
 
 	boost::split(args, event.msg.content, boost::is_any_of(" "));
@@ -41,7 +37,6 @@ std::string tdc::addPlayer(dpp::message_create_t event, Tabela& tabela) {
 	if (autor.getCargo() == "Membro" || autor.getCargo() == "") {
 		throw std::invalid_argument("Voce nao tem permissao para usar esse comando!");
 	}
-	//mensagem deve incluir o nome do jogador, level e id
 
 	std::vector <std::string> args;
 	boost::split(args, event.msg.content, boost::is_any_of(" "));
@@ -72,7 +67,6 @@ std::string tdc::removePlayer(dpp::message_create_t event, Tabela& tabela) {
 		throw std::invalid_argument("Voce nao tem permissao para usar esse comando");
 	}
 
-	//mensagem deve incluir o id do jogador
 	std::vector <std::string> args;
 	boost::split(args, event.msg.content, boost::is_any_of(" "));
 
@@ -100,7 +94,6 @@ std::string tdc::mudarCargo(dpp::message_create_t event, Tabela& tabela) {
 		throw std::invalid_argument("Voce nao tem permissao para usar esse comando");
 	}	
 
-	//mensagem deve incluir o id do jogador e o cargo
 	std::vector <std::string> args;
 	boost::split(args, event.msg.content, boost::is_any_of(" "));
 
@@ -281,6 +274,7 @@ std::string tdc::comando(dpp::message_create_t event, dpp::cluster& bot) {
 	}
 	catch (std::invalid_argument& e) {
 		resposta = e.what();
+		std::cout << "Erro ocorrido: " << e.what() << event.msg.content <<std::endl;
 	}
 	catch (...) {
 		resposta = "Erro desconhecido";

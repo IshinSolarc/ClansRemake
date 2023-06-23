@@ -14,14 +14,11 @@ Tabela::Tabela() {
 	tabela_arquivo = new std::ifstream(player_base_name);
 
 	if (!tabela_arquivo) {
-		//cria o arquivo
 		std::ofstream tabela_arquivo2(player_base_name);
 		tabela_arquivo2.close();
 		tabela_arquivo = new std::ifstream(player_base_name);
 	}
 
-	//entrada esperada em toda linha:
-	//nome id level cargo kicks ban
 	
 	
 	while (std::getline(*tabela_arquivo, line)) {

@@ -8,6 +8,7 @@ int main()
 	std::string token;
 
 	std::ifstream file("config.txt");
+	
 	if (!file.is_open()) {
 		std::cout << "Erro ao abrir arquivo de config" << std::endl;
 		return 1;

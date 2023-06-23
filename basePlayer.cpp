@@ -6,12 +6,10 @@ basePlayer::basePlayer(std::string nome, std::string id, int level, std::string 
 	this->id = id;
 	this->level = level;
 	this->cargo = cargo;
-	PlayerCount++;
 }
 
 basePlayer::~basePlayer()
 {
-	PlayerCount--;	
 }
 
 std::string basePlayer::getNome()
@@ -95,8 +93,6 @@ bool basePlayer::operator>(basePlayer& player)
 {
 	return !(*this < player);
 }
-
-int basePlayer::PlayerCount = 0;
 
 bool compararPlayers(basePlayer player1, basePlayer player2)
 {

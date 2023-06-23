@@ -10,7 +10,6 @@ class basePlayer
 	std::string cargo;
 	
 public:
-	static int PlayerCount;
 	
 	basePlayer(std::string nome, std::string id, int level, std::string cargo);
 	~basePlayer();
